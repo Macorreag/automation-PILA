@@ -2,7 +2,7 @@
   "id": "378c7325-a4be-4426-bb40-351423a2a8e8",
   "version": "2.0",
   "name": "AportesEnLinea",
-  "url": "https://www.aportesenlinea.com/AdicionarLiquidacion.aspx?planilla=I",
+  "url": "https://www.aportesenlinea.com/Home/home.aspx",
   "tests": [{
     "id": "4c1a8f1e-fff5-46fd-8983-918559b0422e",
     "name": "Loggeo",
@@ -191,7 +191,7 @@
       "command": "select",
       "target": "id=Contenido_DpDMes",
       "targets": [],
-      "value": "label=Octubre"
+      "value": "label=Diciembre"
     }, {
       "id": "1460f3d3-07c0-4720-b6ec-d40161aa41fa",
       "comment": "",
@@ -599,6 +599,353 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "9fc49592-c4c4-4e05-a2b5-98d9e46d198c",
+    "name": "for each",
+    "commands": [{
+      "id": "7591f890-25ca-473a-b7e8-93f83e3bb87a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"1005279220\",\"CEDULA2\",\"CEDULA3\"];",
+      "targets": [],
+      "value": "cedulas"
+    }, {
+      "id": "168cd1d5-d0ad-44de-b18b-fafbb3f3d333",
+      "comment": "",
+      "command": "forEach",
+      "target": "cedulas",
+      "targets": [],
+      "value": "cedula"
+    }, {
+      "id": "08564adf-e59e-46c9-98f3-9a652ecd6578",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "343aaf7f-85af-4dd8-8992-654a628e5278",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_tbUsuario",
+      "targets": [
+        ["id=Contenido_tbUsuario", "id"],
+        ["name=ctl00$Contenido$tbUsuario", "name"],
+        ["css=#Contenido_tbUsuario", "css:finder"],
+        ["xpath=//input[@id='Contenido_tbUsuario']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42612670-503a-4eb9-b15f-2107685f6200",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_tbUsuario",
+      "targets": [
+        ["id=Contenido_tbUsuario", "id"],
+        ["name=ctl00$Contenido$tbUsuario", "name"],
+        ["css=#Contenido_tbUsuario", "css:finder"],
+        ["xpath=//input[@id='Contenido_tbUsuario']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${cedula}"
+    }, {
+      "id": "577b4b7e-49e3-42b8-b1e4-61849cfed739",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_tbClave",
+      "targets": [
+        ["id=Contenido_tbClave", "id"],
+        ["name=ctl00$Contenido$tbClave", "name"],
+        ["css=#Contenido_tbClave", "css:finder"],
+        ["xpath=//input[@id='Contenido_tbClave']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "PASSWORD"
+    }, {
+      "id": "09b22029-e386-415f-8510-a35cbad97872",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_lbIniciar",
+      "targets": [
+        ["id=Contenido_lbIniciar", "id"],
+        ["linkText=Ingresar", "linkText"],
+        ["css=#Contenido_lbIniciar", "css:finder"],
+        ["xpath=//a[contains(text(),'Ingresar')]", "xpath:link"],
+        ["xpath=//a[@id='Contenido_lbIniciar']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$Contenido$lbIniciar','')\")]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ingresar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aa45e7e-f4f2-47db-81de-5cbf17931a21",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "51977427-e3a4-4c39-9765-c27868ea8c63",
+    "name": "variasPlanillas",
+    "commands": [{
+      "id": "e477386f-27f2-46f5-8ef9-6dd6abed84e3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"Noviembre\",\"Diciembre\"];",
+      "targets": [],
+      "value": "meses"
+    }, {
+      "id": "369cb139-9c08-4897-a666-cb33ad71f4dd",
+      "comment": "",
+      "command": "forEach",
+      "target": "meses",
+      "targets": [],
+      "value": "mes"
+    }, {
+      "id": "f965ac83-4285-4bcd-9192-872b22ca78bb",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.aportesenlinea.com/Autoliquidaciones.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4549f1d7-5200-4979-8866-ac76c7dfc30b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Liquidaciones",
+      "targets": [
+        ["linkText=Liquidaciones", "linkText"],
+        ["css=.selected", "css:finder"],
+        ["xpath=//a[contains(text(),'Liquidaciones')]", "xpath:link"],
+        ["xpath=//div[@id='mnuEmpresa']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Autoliquidaciones.aspx?maremplsid=uwceoev2nbki2ed3fhyxj5mm')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Liquidaciones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7feb0ce-53da-40fd-9778-18fbca0045bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_ImageButton1 > .ui-button-text",
+      "targets": [
+        ["css=#Contenido_ImageButton1 > .ui-button-text", "css:finder"],
+        ["xpath=//a[@id='Contenido_ImageButton1']/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar Liquidación')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b99a8a58-a52c-4c85-8fcb-d11057892d2c",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_DpDMes",
+      "targets": [],
+      "value": "label=${mes}"
+    }, {
+      "id": "0c909cf8-70ff-42e6-b877-5518561d8ff8",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDMes",
+      "targets": [
+        ["id=Contenido_DpDMes", "id"],
+        ["name=ctl00$Contenido$DpDMes", "name"],
+        ["css=#Contenido_DpDMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_UpdatePanelPension']/table/tbody/tr[2]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "574f619e-7b97-4234-a9d5-b97c0f68c366",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnAdicionar",
+      "targets": [
+        ["id=Contenido_btnAdicionar", "id"],
+        ["name=ctl00$Contenido$btnAdicionar", "name"],
+        ["css=#Contenido_btnAdicionar", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnAdicionar']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_UpdatePanel2']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9c8a68f-cea3-457f-b702-a3952a8cd40c",
+      "comment": "SaltarAlert se necesita mantener esta ventana para saltar",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14093df9-6d7e-419a-ab07-26195cab3cb8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2fb42f63-41cd-4705-98d5-3af53ab2c3f3",
+    "name": "GenerarPDFplanilla",
+    "commands": [{
+      "id": "1e398a3b-f980-4775-a57c-f0292ef75298",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.aportesenlinea.com/Autoliquidaciones.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a309e37-bb67-453e-b380-ef146e151c4b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1057x725",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4196f43-d0c3-4832-bc34-80956f40970f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Liquidaciones",
+      "targets": [
+        ["linkText=Liquidaciones", "linkText"],
+        ["css=.selected", "css:finder"],
+        ["xpath=//a[contains(text(),'Liquidaciones')]", "xpath:link"],
+        ["xpath=//div[@id='mnuEmpresa']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Autoliquidaciones.aspx?maremplsid=l2dlizpbuputjrgk545r2ty2')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Liquidaciones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a43b8193-334f-4ffb-926b-2b6da4dd33e0",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_gvAutoliquidaciones_LbValorPagado_0",
+      "targets": [
+        ["id=Contenido_gvAutoliquidaciones_LbValorPagado_0", "id"],
+        ["linkText=Pagar Planilla", "linkText"],
+        ["css=#Contenido_gvAutoliquidaciones_LbValorPagado_0", "css:finder"],
+        ["xpath=//a[contains(text(),'Pagar Planilla')]", "xpath:link"],
+        ["xpath=//a[@id='Contenido_gvAutoliquidaciones_LbValorPagado_0']", "xpath:attributes"],
+        ["xpath=//table[@id='Contenido_gvAutoliquidaciones']/tbody/tr[3]/td[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$Contenido$gvAutoliquidaciones$ctl03$LbValorPagado','')\")]", "xpath:href"],
+        ["xpath=//td[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pagar Planilla')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03ef9dd8-d148-4ce2-a6f9-13370807c04c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "814d1d13-e7d6-4bc2-be9f-bd0acecfe8a0",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "newWindow",
+      "windowTimeout": 2000
+    }, {
+      "id": "453b805b-5bed-4041-9aa2-97dc81e74c66",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${newWindow}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd59c474-a7ae-45b9-afa9-69b6c2fa2cf8",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_imgBtnPagoAsistido",
+      "targets": [
+        ["id=Contenido_imgBtnPagoAsistido", "id"],
+        ["name=ctl00$Contenido$imgBtnPagoAsistido", "name"],
+        ["css=#Contenido_imgBtnPagoAsistido", "css:finder"],
+        ["xpath=//input[@id='Contenido_imgBtnPagoAsistido']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/div/section[6]/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5e41968-3a92-489e-9696-bed6db370839",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
+        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
+        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "880050fa-56e9-47bc-a057-44632c931760",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [],
+      "value": "label=PDF"
+    }, {
+      "id": "209cd196-057b-4b63-9ad1-87eae9fc0a5c",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
+        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
+        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d38c5249-c11c-4830-9f3b-cf730652f35a",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl01",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl01", "id"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl01", "css:finder"],
+        ["xpath=//a[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl01']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Export')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8083",
+      "windowTimeout": 2000
+    }]
   }],
   "suites": [{
     "id": "5fd9d5ba-7c16-4a43-ba55-e983acaa4418",
@@ -608,6 +955,6 @@
     "timeout": 10,
     "tests": ["94700ae4-e61a-4254-bfe8-0d8ffa142fdd", "438887ea-557a-41b2-94cc-0abf338be8ad"]
   }],
-  "urls": ["https://www.aportesenlinea.com/", "https://www.aportesenlinea.com/Novedad.aspx?Acc=Adicionar", "https://www.aportesenlinea.com/modificarEmpleado.aspx", "https://www.aportesenlinea.com/empleados.aspx", "https://www.aportesenlinea.com/AdicionarLiquidacion.aspx?planilla=I", "https://www.aportesenlinea.com/Autoliquidaciones.aspx"],
+  "urls": ["https://www.aportesenlinea.com/", "https://www.aportesenlinea.com/Novedad.aspx?Acc=Adicionar", "https://www.aportesenlinea.com/modificarEmpleado.aspx", "https://www.aportesenlinea.com/empleados.aspx", "https://www.aportesenlinea.com/AdicionarLiquidacion.aspx?planilla=I", "https://www.aportesenlinea.com/Autoliquidaciones.aspx", "https://www.aportesenlinea.com/Home/home.aspx", "https://www.google.com/"],
   "plugins": []
 }
