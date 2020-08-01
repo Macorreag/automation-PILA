@@ -1,0 +1,8 @@
+VERSION BUILD=1005 RECORDER=CR
+URL GOTO=https://www.aportesenlinea.com/empleados.aspx
+TAG POS=1 TYPE=A ATTR=ID:ui-menu-0-2
+TAG POS=1 TYPE=SELECT FORM=ID:formBody ATTR=ID:Contenido_DpDLstTipoNovedad CONTENT=%RET
+TAG POS=1 TYPE=SELECT FORM=ID:formBody ATTR=ID:Contenido_DpDMes CONTENT=%10
+TAG POS=1 TYPE=TD ATTR=TXT:Día<SP>Inicial
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:formBody ATTR=ID:Contenido_TxtDiaInc CONTENT=20
+TAG POS=1 TYPE=INPUT:BUTTON FORM=ID:formBody ATTR=ID:Contenido_BtnGuardar

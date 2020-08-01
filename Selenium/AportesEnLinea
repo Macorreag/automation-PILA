@@ -1,0 +1,250 @@
+{
+  "id": "378c7325-a4be-4426-bb40-351423a2a8e8",
+  "version": "2.0",
+  "name": "OportesEnLinea",
+  "url": "https://www.aportesenlinea.com/Novedad.aspx?Acc=Adicionar",
+  "tests": [{
+    "id": "4c1a8f1e-fff5-46fd-8983-918559b0422e",
+    "name": "Loggeo",
+    "commands": [{
+      "id": "760d4ed7-2174-492a-9ba4-0b369bd73836",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de8c26d9-f31c-4289-b2f2-2f696631fdb0",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_tbUsuario",
+      "targets": [
+        ["id=Contenido_tbUsuario", "id"],
+        ["name=ctl00$Contenido$tbUsuario", "name"],
+        ["css=#Contenido_tbUsuario", "css:finder"],
+        ["xpath=//input[@id='Contenido_tbUsuario']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "USUARIO"
+    }, {
+      "id": "7168e213-fd55-49fc-a41a-3c9eeea2e8ad",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_tbClave",
+      "targets": [
+        ["id=Contenido_tbClave", "id"],
+        ["name=ctl00$Contenido$tbClave", "name"],
+        ["css=#Contenido_tbClave", "css:finder"],
+        ["xpath=//input[@id='Contenido_tbClave']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "CONTRASEÑA"
+    }, {
+      "id": "0659f3fd-a4e1-4625-830d-c8e16296d8b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_lbIniciar",
+      "targets": [
+        ["id=Contenido_lbIniciar", "id"],
+        ["linkText=Ingresar", "linkText"],
+        ["css=#Contenido_lbIniciar", "css:finder"],
+        ["xpath=//a[contains(text(),'Ingresar')]", "xpath:link"],
+        ["xpath=//a[@id='Contenido_lbIniciar']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$Contenido$lbIniciar','')\")]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ingresar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "94700ae4-e61a-4254-bfe8-0d8ffa142fdd",
+    "name": "AdicionarNovedadRetiro",
+    "commands": [{
+      "id": "85bf47d6-34e8-419c-8d14-1a7450fb4d84",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.aportesenlinea.com/Novedad.aspx?Acc=Adicionar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7c4036a-a674-4cb3-8c26-773461ad9050",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1055x723",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cb5531d-19e6-40a7-af31-cee8a21d4d34",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_PnlTipoNovedad table",
+      "targets": [
+        ["css=#Contenido_PnlTipoNovedad table", "css:finder"],
+        ["xpath=//div[@id='Contenido_PnlTipoNovedad']/fieldset/table", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr/td/div/fieldset/table", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e004f237-3a4b-4dbc-a8b7-c6fa7e70d7d7",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDLstTipoNovedad",
+      "targets": [
+        ["id=Contenido_DpDLstTipoNovedad", "id"],
+        ["name=ctl00$Contenido$DpDLstTipoNovedad", "name"],
+        ["css=#Contenido_DpDLstTipoNovedad", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDLstTipoNovedad']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlTipoNovedad']/fieldset/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr/td/div/fieldset/table/tbody/tr/td/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a75b0400-36ae-4b10-90cb-5192a8d3611d",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_DpDLstTipoNovedad",
+      "targets": [],
+      "value": "label=RETIRO DE LA EMPRESA"
+    }, {
+      "id": "ec19076d-6f92-4451-9c37-446325e18cac",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDLstTipoNovedad",
+      "targets": [
+        ["id=Contenido_DpDLstTipoNovedad", "id"],
+        ["name=ctl00$Contenido$DpDLstTipoNovedad", "name"],
+        ["css=#Contenido_DpDLstTipoNovedad", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDLstTipoNovedad']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlTipoNovedad']/fieldset/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr/td/div/fieldset/table/tbody/tr/td/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b04427f8-2f11-4c51-9d50-2c2596c26ecb",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDMes",
+      "targets": [
+        ["id=Contenido_DpDMes", "id"],
+        ["name=ctl00$Contenido$DpDMes", "name"],
+        ["css=#Contenido_DpDMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlPeridodo']/fieldset/table/tbody/tr[2]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfecd14e-e0bd-49e4-8c4f-763f1c5291b4",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_DpDMes",
+      "targets": [],
+      "value": "label=Noviembre"
+    }, {
+      "id": "1460f3d3-07c0-4720-b6ec-d40161aa41fa",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDMes",
+      "targets": [
+        ["id=Contenido_DpDMes", "id"],
+        ["name=ctl00$Contenido$DpDMes", "name"],
+        ["css=#Contenido_DpDMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlPeridodo']/fieldset/table/tbody/tr[2]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7292d40d-ffe0-40e7-8753-d117e30cf7c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_PnlDiaInc tr",
+      "targets": [
+        ["css=#Contenido_PnlDiaInc tr", "css:finder"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr", "xpath:idRelative"],
+        ["xpath=//div/table/tbody/tr", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd42c1d0-29b5-4784-8974-43f7e5c44129",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "8462756a-0164-422e-9d3f-feaf737ff82a",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_BtnGuardar",
+      "targets": [
+        ["id=Contenido_BtnGuardar", "id"],
+        ["name=ctl00$Contenido$BtnGuardar", "name"],
+        ["css=#Contenido_BtnGuardar", "css:finder"],
+        ["xpath=//input[@id='Contenido_BtnGuardar']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "438887ea-557a-41b2-94cc-0abf338be8ad",
+    "name": "SaltarAlerta",
+    "commands": [{
+      "id": "edaf792a-50c0-4190-b132-054e4b9e9dfc",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Esta novedad automáticamente actualizará la fecha de retiro del empleado. Para registrar la novedad y actualizar los datos del empleado haga clic en el botón “Aceptar” (OK). En caso contrario haga clic en el botón “Cancelar” (Cancel).",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cfc48ef-794c-4fc0-adc8-e57b331dc5bb",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_BtnGuardar",
+      "targets": [
+        ["id=Contenido_BtnGuardar", "id"],
+        ["name=ctl00$Contenido$BtnGuardar", "name"],
+        ["css=#Contenido_BtnGuardar", "css:finder"],
+        ["xpath=//input[@id='Contenido_BtnGuardar']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be796973-f7a6-4263-ae21-457db83c1633",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "541b3ce3-b405-4976-b7aa-aa60a071f27b",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5fd9d5ba-7c16-4a43-ba55-e983acaa4418",
+    "name": "Complete",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 10,
+    "tests": ["94700ae4-e61a-4254-bfe8-0d8ffa142fdd", "438887ea-557a-41b2-94cc-0abf338be8ad"]
+  }],
+  "urls": ["https://www.aportesenlinea.com/", "https://www.aportesenlinea.com/Novedad.aspx?Acc=Adicionar"],
+  "plugins": []
+}
