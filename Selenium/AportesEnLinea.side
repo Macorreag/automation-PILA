@@ -96,18 +96,46 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "9a91b6c5-4c69-45fb-a405-d4dd93e3adab",
+      "id": "3bb2caec-578f-4763-b0b1-a83cb313b829",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=Contenido_checkVigente",
+      "targets": [],
+      "value": "checkStatus"
+    }, {
+      "id": "0c713ecb-10e7-4422-8fcd-28b8cfb01d21",
+      "comment": "",
+      "command": "echo",
+      "target": "${checkStatus}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c456454c-cebc-43e4-87f0-74c4806acdb8",
+      "comment": "",
+      "command": "if",
+      "target": "${checkStatus}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b3293c5-2d17-442c-a9c9-11832fa6a0a6",
       "comment": "",
       "command": "click",
+      "target": "id=Contenido_checkVigente",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cab3f4cc-1858-4534-8cb2-585c40e38749",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a91b6c5-4c69-45fb-a405-d4dd93e3adab",
+      "comment": "",
+      "command": "mouseOver",
       "target": "linkText=Opciones",
-      "targets": [
-        ["linkText=Opciones", "linkText"],
-        ["css=.opciones", "css:finder"],
-        ["xpath=//a[contains(text(),'Opciones')]", "xpath:link"],
-        ["xpath=//table[@id='Contenido_gvEmpleados']/tbody/tr[3]/td/a", "xpath:idRelative"],
-        ["xpath=//tr[3]/td/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Opciones ')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "40369a6a-5910-4281-bf39-7f898a037c2a",
@@ -191,7 +219,7 @@
       "command": "select",
       "target": "id=Contenido_DpDMes",
       "targets": [],
-      "value": "label=Diciembre"
+      "value": "label=Octubre"
     }, {
       "id": "1460f3d3-07c0-4720-b6ec-d40161aa41fa",
       "comment": "",
@@ -435,7 +463,7 @@
       "command": "select",
       "target": "id=Contenido_DpDMes",
       "targets": [],
-      "value": "label=Septiembre"
+      "value": "label=Octubre"
     }, {
       "id": "a642ad5f-bc64-4239-8089-76646fcc1b05",
       "comment": "",
@@ -469,34 +497,6 @@
         ["xpath=//input[@id='Contenido_btnAdicionar']", "xpath:attributes"],
         ["xpath=//div[@id='Contenido_UpdatePanel2']/input", "xpath:idRelative"],
         ["xpath=//div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "24742c2e-b739-47bb-84e2-183533d92c60",
-      "comment": "",
-      "command": "waitForElementPresent",
-      "target": "id=Contenido_btnPagoElectronico",
-      "targets": [
-        ["id=Contenido_btnPagoElectronico", "id"],
-        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
-        ["css=#Contenido_btnPagoElectronico", "css:finder"],
-        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
-        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
-        ["xpath=//td[2]/input", "xpath:position"]
-      ],
-      "value": "30000"
-    }, {
-      "id": "abfb0c40-bb43-4fa1-afc1-b1c3e466307c",
-      "comment": "",
-      "command": "click",
-      "target": "id=Contenido_btnPagoElectronico",
-      "targets": [
-        ["id=Contenido_btnPagoElectronico", "id"],
-        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
-        ["css=#Contenido_btnPagoElectronico", "css:finder"],
-        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
-        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
-        ["xpath=//td[2]/input", "xpath:position"]
       ],
       "value": ""
     }]
@@ -697,7 +697,7 @@
       "id": "e477386f-27f2-46f5-8ef9-6dd6abed84e3",
       "comment": "",
       "command": "executeScript",
-      "target": "return [\"Noviembre\",\"Diciembre\"];",
+      "target": "return [\"Agosto\",\"Septiembre\"];",
       "targets": [],
       "value": "meses"
     }, {
@@ -763,9 +763,9 @@
       ],
       "value": ""
     }, {
-      "id": "574f619e-7b97-4234-a9d5-b97c0f68c366",
+      "id": "433efa79-6207-43b4-b73f-d2eb016af973",
       "comment": "",
-      "command": "click",
+      "command": "waitForElementPresent",
       "target": "id=Contenido_btnAdicionar",
       "targets": [
         ["id=Contenido_btnAdicionar", "id"],
@@ -773,8 +773,15 @@
         ["css=#Contenido_btnAdicionar", "css:finder"],
         ["xpath=//input[@id='Contenido_btnAdicionar']", "xpath:attributes"],
         ["xpath=//div[@id='Contenido_UpdatePanel2']/input", "xpath:idRelative"],
-        ["xpath=//div/input", "xpath:position"]
+        ["xpath=//td/div/input", "xpath:position"]
       ],
+      "value": "30000"
+    }, {
+      "id": "574f619e-7b97-4234-a9d5-b97c0f68c366",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnAdicionar",
+      "targets": [],
       "value": ""
     }, {
       "id": "f9c8a68f-cea3-457f-b702-a3952a8cd40c",
@@ -783,6 +790,20 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "ea79980b-aa7e-410c-9fd8-554084d54d17",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "30000"
     }, {
       "id": "14093df9-6d7e-419a-ab07-26195cab3cb8",
       "comment": "",
