@@ -2,31 +2,17 @@
   "id": "378c7325-a4be-4426-bb40-351423a2a8e8",
   "version": "2.0",
   "name": "AportesEnLinea",
-  "url": "https://www.aportesenlinea.com/Home/home.aspx",
+  "url": "https://www.aportesenlinea.com",
   "tests": [{
     "id": "4c1a8f1e-fff5-46fd-8983-918559b0422e",
-    "name": "Loggeo",
+    "name": "login",
     "commands": [{
-      "id": "760d4ed7-2174-492a-9ba4-0b369bd73836",
-      "comment": "",
-      "command": "open",
-      "target": "https://www.aportesenlinea.com/",
-      "targets": [],
-      "value": "https://www.aportesenlinea.com/"
-    }, {
       "id": "de8c26d9-f31c-4289-b2f2-2f696631fdb0",
       "comment": "",
       "command": "type",
       "target": "id=Contenido_tbUsuario",
-      "targets": [
-        ["id=Contenido_tbUsuario", "id"],
-        ["name=ctl00$Contenido$tbUsuario", "name"],
-        ["css=#Contenido_tbUsuario", "css:finder"],
-        ["xpath=//input[@id='Contenido_tbUsuario']", "xpath:attributes"],
-        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": "CEDULA"
+      "targets": [],
+      "value": "${cedula}"
     }, {
       "id": "7168e213-fd55-49fc-a41a-3c9eeea2e8ad",
       "comment": "",
@@ -40,7 +26,7 @@
         ["xpath=//form[@id='form1']/div[3]/section/div[2]/div[2]/input", "xpath:idRelative"],
         ["xpath=//div[2]/div[2]/input", "xpath:position"]
       ],
-      "value": "PASSWORD"
+      "value": "Hugocorrea1"
     }, {
       "id": "0659f3fd-a4e1-4625-830d-c8e16296d8b2",
       "comment": "",
@@ -59,23 +45,22 @@
       ],
       "value": ""
     }, {
-      "id": "b71db1c5-3502-4f35-bc8f-e54542fcfa33",
+      "id": "0f681521-9227-49fa-bcd0-a0890151512e",
       "comment": "",
-      "command": "doubleClickAt",
-      "target": "css=.ui-state-focus > .ui-button-text",
-      "targets": [],
-      "value": "30000"
-    }, {
-      "id": "b9fa243d-3f3d-4c88-8136-a958c3a3c933",
-      "comment": "",
-      "command": "click",
-      "target": "css=.ui-state-focus > .ui-button-text",
+      "command": "waitForElementPresent",
+      "target": "id=Encabezado01_1_lblIdentEmpleador",
       "targets": [
-        ["css=.ui-state-focus > .ui-button-text", "css:finder"],
-        ["xpath=//form[@id='form1']/div[4]/div[3]/div/button/span", "xpath:idRelative"],
-        ["xpath=//div[3]/div/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Si, iniciar nueva sesión')]", "xpath:innerText"]
+        ["css=.f-v-center", "css:finder"],
+        ["xpath=//form[@id='formBody']/header/div", "xpath:idRelative"],
+        ["xpath=//header/div", "xpath:position"]
       ],
+      "value": "statusOK"
+    }, {
+      "id": "b63413ea-00d6-43ed-950d-e4989d4a4841",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.ui-button-text:nth-child(1)",
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -85,14 +70,7 @@
       "id": "85bf47d6-34e8-419c-8d14-1a7450fb4d84",
       "comment": "",
       "command": "open",
-      "target": "https://www.aportesenlinea.com/empleados.aspx",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d7c4036a-a674-4cb3-8c26-773461ad9050",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1055x723",
+      "target": "/empleados.aspx",
       "targets": [],
       "value": ""
     }, {
@@ -113,7 +91,7 @@
       "id": "c456454c-cebc-43e4-87f0-74c4806acdb8",
       "comment": "",
       "command": "if",
-      "target": "${checkStatus}",
+      "target": "${checkStatus} == 'on'",
       "targets": [],
       "value": ""
     }, {
@@ -138,20 +116,29 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "3bbe3414-7285-4340-926d-6178525946f7",
+      "comment": "",
+      "command": "//click",
+      "target": "id=ui-menu-2-2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dca4ff1c-7b24-4d6a-9cc9-eedf9ad46636",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.icono-hoversub",
+      "targets": [
+        ["css=.icono-hoversub", "css:finder"],
+        ["xpath=//table[@id='Contenido_gvEmpleados']/tbody/tr[3]/td/a/span", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
       "id": "40369a6a-5910-4281-bf39-7f898a037c2a",
       "comment": "",
       "command": "click",
       "target": "id=ui-menu-0-2",
-      "targets": [
-        ["id=ui-menu-0-2", "id"],
-        ["linkText=Adicionar Novedad", "linkText"],
-        ["css=#ui-menu-0-2", "css:finder"],
-        ["xpath=//a[@id='ui-menu-0-2']", "xpath:attributes"],
-        ["xpath=//ul[@id='ui-menu-0']/li[3]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\"ctl00$Contenido$gvEmpleados$ctl03$LnkBttAdicionar\", \"\", true, \"\", \"\", false, true))')]", "xpath:href"],
-        ["xpath=//td/ul/li[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'  Adicionar Novedad')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "6cb5531d-19e6-40a7-af31-cee8a21d4d34",
@@ -340,16 +327,24 @@
     "commands": [{
       "id": "b1e06d32-a48f-43bd-9fe7-739b6abf8e3b",
       "comment": "",
-      "command": "open",
-      "target": "https://www.aportesenlinea.com/empleados.aspx",
+      "command": "//open",
+      "target": "/empleados.aspx",
       "targets": [],
       "value": ""
     }, {
-      "id": "e8f9f89a-08f7-497a-9edf-8b4fc6cb6cc0",
+      "id": "ed6ee1f5-c9df-42ce-b87c-67f7a3d44fa2",
       "comment": "",
-      "command": "setWindowSize",
-      "target": "1055x723",
-      "targets": [],
+      "command": "click",
+      "target": "linkText=Empleados",
+      "targets": [
+        ["linkText=Empleados", "linkText"],
+        ["css=.highlighted", "css:finder"],
+        ["xpath=//a[contains(text(),'Empleados')]", "xpath:link"],
+        ["xpath=//div[@id='mnuEmpresa']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'empleados.aspx')]", "xpath:href"],
+        ["xpath=//div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Empleados')]", "xpath:innerText"]
+      ],
       "value": ""
     }, {
       "id": "20523b54-e152-4560-ba55-cb559d8637de",
@@ -428,12 +423,12 @@
     }]
   }, {
     "id": "5835ebf0-2092-4b3a-be8a-05577e518d1b",
-    "name": "GenerarPlanilla",
+    "name": "GenerarPlanillaAgosto",
     "commands": [{
       "id": "bc6c2135-cac7-4046-8783-d1223d315232",
       "comment": "",
       "command": "open",
-      "target": "https://www.aportesenlinea.com/AdicionarLiquidacion.aspx?planilla=I",
+      "target": "/AdicionarLiquidacion.aspx?planilla=I",
       "targets": [],
       "value": ""
     }, {
@@ -463,7 +458,7 @@
       "command": "select",
       "target": "id=Contenido_DpDMes",
       "targets": [],
-      "value": "label=Octubre"
+      "value": "label=Agosto"
     }, {
       "id": "a642ad5f-bc64-4239-8089-76646fcc1b05",
       "comment": "",
@@ -507,7 +502,7 @@
       "id": "527a0d9c-ba20-436e-b09c-ac1ceb1c3ce4",
       "comment": "",
       "command": "open",
-      "target": "https://www.aportesenlinea.com/empleados.aspx",
+      "target": "/empleados.aspx",
       "targets": [],
       "value": ""
     }, {
@@ -606,7 +601,7 @@
       "id": "7591f890-25ca-473a-b7e8-93f83e3bb87a",
       "comment": "",
       "command": "executeScript",
-      "target": "return [\"1005279220\",\"CEDULA2\",\"CEDULA3\"];",
+      "target": "return [\"18411718\",\"1097731505\",\"1113362708\"];",
       "targets": [],
       "value": "cedulas"
     }, {
@@ -683,6 +678,13 @@
       ],
       "value": ""
     }, {
+      "id": "bc45c7ba-6bc6-4236-a51a-8bda4eaed15f",
+      "comment": "",
+      "command": "run",
+      "target": "AddNovedadRetiro2",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "9aa45e7e-f4f2-47db-81de-5cbf17931a21",
       "comment": "",
       "command": "end",
@@ -711,7 +713,7 @@
       "id": "f965ac83-4285-4bcd-9192-872b22ca78bb",
       "comment": "",
       "command": "open",
-      "target": "https://www.aportesenlinea.com/Autoliquidaciones.aspx",
+      "target": "/Autoliquidaciones.aspx",
       "targets": [],
       "value": ""
     }, {
@@ -814,19 +816,12 @@
     }]
   }, {
     "id": "2fb42f63-41cd-4705-98d5-3af53ab2c3f3",
-    "name": "GenerarPDFplanilla",
+    "name": "GenerarPDFplanilla_0",
     "commands": [{
       "id": "1e398a3b-f980-4775-a57c-f0292ef75298",
       "comment": "",
       "command": "open",
       "target": "https://www.aportesenlinea.com/Autoliquidaciones.aspx",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9a309e37-bb67-453e-b380-ef146e151c4b",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1057x725",
       "targets": [],
       "value": ""
     }, {
@@ -876,6 +871,13 @@
       ],
       "value": "30000"
     }, {
+      "id": "126eef63-8e54-4fda-b058-fc0a6160778c",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "814d1d13-e7d6-4bc2-be9f-bd0acecfe8a0",
       "comment": "",
       "command": "click",
@@ -891,7 +893,7 @@
       "value": "",
       "opensWindow": true,
       "windowHandleName": "newWindow",
-      "windowTimeout": 2000
+      "windowTimeout": 40000
     }, {
       "id": "453b805b-5bed-4041-9aa2-97dc81e74c66",
       "comment": "",
@@ -964,8 +966,1258 @@
       ],
       "value": "",
       "opensWindow": true,
+      "windowHandleName": "savefile",
+      "windowTimeout": 2000
+    }, {
+      "id": "ea0db411-89c7-4703-a3ac-0ea5596a20d8",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04d7667c-a3b7-4eba-8b3f-daa6f3e9a2a5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Liquidaciones",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "4d14adfe-898a-41dc-926e-67b86054631b",
+    "name": "MostrarEmpleados",
+    "commands": [{
+      "id": "6a3f4dcc-2c03-4423-bf45-19e2024b9120",
+      "comment": "",
+      "command": "open",
+      "target": "/empleados.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "762ab88e-6ed9-4907-bc58-01d63fc077d5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1055x723",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96b1c960-2ace-4faa-a9cb-96cd3134c87b",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=Contenido_checkVigente",
+      "targets": [],
+      "value": "checkStatus"
+    }, {
+      "id": "86d9130f-d90d-429a-9e16-56cf70777f14",
+      "comment": "",
+      "command": "echo",
+      "target": "${checkStatus}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d7d65d7-4250-47af-a721-1d7021abb461",
+      "comment": "",
+      "command": "if",
+      "target": "${checkStatus} == 'on'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89f06b41-ab58-4129-9c1a-d2febd3f4ad3",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_checkVigente",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "074047a3-37d4-4582-bbb3-4a247a8763d0",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e7d581a-afca-4dfd-928b-c2e60a9ea59c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "linkText=Opciones",
+      "targets": [
+        ["linkText=Opciones", "linkText"],
+        ["css=.opciones", "css:finder"],
+        ["xpath=//a[contains(text(),'Opciones')]", "xpath:link"],
+        ["xpath=//table[@id='Contenido_gvEmpleados']/tbody/tr[3]/td/a", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Opciones ')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }]
+  }, {
+    "id": "e88d7205-06f9-4044-ab97-9225767a63b5",
+    "name": "RecuperacionPass",
+    "commands": [{
+      "id": "62f34352-5171-4593-a01e-2cf75e6bccb2",
+      "comment": "",
+      "command": "open",
+      "target": "/Home/home.aspx?ReturnUrl=%2f",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbd7139c-79ab-4fa7-956e-8419f2644dff",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1053",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3307942-fd5b-4d2d-97c5-51f4039c7f39",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Olvidé mi contraseña",
+      "targets": [
+        ["linkText=Olvidé mi contraseña", "linkText"],
+        ["css=.mb-3 > .field-option", "css:finder"],
+        ["xpath=//a[contains(text(),'Olvidé mi contraseña')]", "xpath:link"],
+        ["xpath=//form[@id='form1']/div[3]/section/div[2]/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'RecordarClave.aspx')]", "xpath:href"],
+        ["xpath=//div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Olvidé mi contraseña')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "987dcba1-0a41-45b8-94af-f120fe4d84be",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_txtUser",
+      "targets": [
+        ["id=Contenido_txtUser", "id"],
+        ["name=ctl00$Contenido$txtUser", "name"],
+        ["css=#Contenido_txtUser", "css:finder"],
+        ["xpath=//input[@id='Contenido_txtUser']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/div/fieldset/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bead36b-0965-4776-b162-b36fdffe47d0",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_txtUser",
+      "targets": [
+        ["id=Contenido_txtUser", "id"],
+        ["name=ctl00$Contenido$txtUser", "name"],
+        ["css=#Contenido_txtUser", "css:finder"],
+        ["xpath=//input[@id='Contenido_txtUser']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/div/fieldset/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "${cedula}"
+    }, {
+      "id": "ed336623-593e-416a-953b-cf82066010c9",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b5c7fb2-01bc-4a97-a2ac-b0bf4cb87801",
+      "comment": "",
+      "command": "click",
+      "target": "css=.recaptcha-checkbox-border",
+      "targets": [
+        ["css=.recaptcha-checkbox-border", "css:finder"],
+        ["xpath=//span[@id='recaptcha-anchor']/div", "xpath:idRelative"],
+        ["xpath=//span/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b84275f-4ffb-4cd6-bcbe-ebab66262024",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "14f117d9-c1a5-43bf-83ec-b0f8f19af6db",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnRecordar",
+      "targets": [
+        ["id=Contenido_btnRecordar", "id"],
+        ["name=ctl00$Contenido$btnRecordar", "name"],
+        ["css=#Contenido_btnRecordar", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnRecordar']", "xpath:attributes"],
+        ["xpath=//form[@id='form1']/div[3]/div/fieldset/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67794cbc-8673-4b33-a8db-2cb62c2ec18d",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7d0429eb-9591-4815-8503-2fe6c9fd72c9",
+    "name": "repeatScript",
+    "commands": [{
+      "id": "d33b6136-2772-4cad-ba35-823745c6a8a6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"1096201239\"];",
+      "targets": [],
+      "value": "cedulas"
+    }, {
+      "id": "dd8f75c5-3630-4a42-b20e-5baf579f2f81",
+      "comment": "",
+      "command": "forEach",
+      "target": "cedulas",
+      "targets": [],
+      "value": "cedula"
+    }, {
+      "id": "0f9e5fd2-5a0d-4042-b28c-de4b40cd7624",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "564a850a-ad47-4d27-8ef4-56115bd61fc8",
+      "comment": "",
+      "command": "run",
+      "target": "login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbdf3bbf-e2a4-4e34-a483-b9c6dd71974d",
+      "comment": "",
+      "command": "run",
+      "target": "AddNovedadIngreso",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c45e0903-919b-4e16-b547-8465bb6bf66d",
+      "comment": "",
+      "command": "run",
+      "target": "AddNovedadRetiro2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54de52b3-5868-40cc-ac85-aa6a628f85fd",
+      "comment": "",
+      "command": "run",
+      "target": "Cambio30dias",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed944260-071f-4790-bb2a-006670505780",
+      "comment": "",
+      "command": "run",
+      "target": "GenerarPlanillaAgosto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06dbaa38-f682-48f9-8fa9-1beb68828ce2",
+      "comment": "",
+      "command": "run",
+      "target": "GenerarPlanillaOctubre",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea6b7012-4cc5-4dbe-9c57-c93cec2b03fb",
+      "comment": "",
+      "command": "run",
+      "target": "CambioMesCompleto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ae6a52f-bb6d-4896-b7a6-9a396bd2032c",
+      "comment": "",
+      "command": "run",
+      "target": "GenerarPlanillaSeptiembre",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f91c2ef7-2953-4368-af73-278c737f39e4",
+      "comment": "",
+      "command": "run",
+      "target": "GenerarPDFplanilla_0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84d3f49a-bf15-4986-9d20-e14dc5439245",
+      "comment": "",
+      "command": "run",
+      "target": "GenerarPDFplanilla_1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23378bed-fc7b-4764-bf12-c5ed9b5e994d",
+      "comment": "",
+      "command": "run",
+      "target": "GenerarPDFplanilla_2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9f55d3c-1fb0-4c87-9fd8-a833b589ba92",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Salir",
+      "targets": [
+        ["linkText=Salir", "linkText"],
+        ["css=.highlighted", "css:finder"],
+        ["xpath=//a[contains(text(),'Salir')]", "xpath:link"],
+        ["xpath=//div[@id='mnuEmpresa']/ul/li[10]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Terminar.aspx')]", "xpath:href"],
+        ["xpath=//div/ul/li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Salir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1623f382-c917-4efe-aa32-5d74ac74aeaa",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "07781ebe-0fdb-480c-9235-2be221b832da",
+    "name": "AddNovedadRetiro2",
+    "commands": [{
+      "id": "13c2395a-9df3-48e6-a900-a770c50a9a45",
+      "comment": "",
+      "command": "open",
+      "target": "/Novedades.aspx?Inc=mnu",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b63f9ff-46c5-43b0-b1f9-e663affd4b43",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Novedades",
+      "targets": [
+        ["linkText=Novedades", "linkText"],
+        ["css=.highlighted", "css:finder"],
+        ["xpath=//a[contains(text(),'Novedades')]", "xpath:link"],
+        ["xpath=//div[@id='mnuEmpresa']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Novedades.aspx?Inc=mnu')]", "xpath:href"],
+        ["xpath=//div/ul/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Novedades')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80b35687-896e-431b-af6c-0fda94469cb0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_btnAdicionar > .ui-button-text",
+      "targets": [
+        ["css=#Contenido_btnAdicionar > .ui-button-text", "css:finder"],
+        ["xpath=//a[@id='Contenido_btnAdicionar']/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar Novedad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17c1e1ef-6ba8-48e6-9231-5c10a1daf052",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_ucAdicionar_dpdMes",
+      "targets": [],
+      "value": "label=Octubre"
+    }, {
+      "id": "7efac5ea-ec9b-4ab5-bbac-3bfa6d0eddf6",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ucAdicionar_dpdMes",
+      "targets": [
+        ["id=Contenido_ucAdicionar_dpdMes", "id"],
+        ["name=ctl00$Contenido$ucAdicionar$dpdMes", "name"],
+        ["css=#Contenido_ucAdicionar_dpdMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_ucAdicionar_dpdMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ucAdicionar_divAdd']/div/fieldset/select[2]", "xpath:idRelative"],
+        ["xpath=//fieldset/select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94023a06-1d09-41dc-b1f4-687c94050eeb",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ucAdicionar_txtNoID",
+      "targets": [
+        ["id=Contenido_ucAdicionar_txtNoID", "id"],
+        ["name=ctl00$Contenido$ucAdicionar$txtNoID", "name"],
+        ["css=#Contenido_ucAdicionar_txtNoID", "css:finder"],
+        ["xpath=//input[@id='Contenido_ucAdicionar_txtNoID']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ucAdicionar_divAdd']/div[2]/fieldset/input", "xpath:idRelative"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47c1e792-52a9-4280-bbc5-c9919f240c92",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_ucAdicionar_txtNoID",
+      "targets": [
+        ["id=Contenido_ucAdicionar_txtNoID", "id"],
+        ["name=ctl00$Contenido$ucAdicionar$txtNoID", "name"],
+        ["css=#Contenido_ucAdicionar_txtNoID", "css:finder"],
+        ["xpath=//input[@id='Contenido_ucAdicionar_txtNoID']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ucAdicionar_divAdd']/div[2]/fieldset/input", "xpath:idRelative"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": "${cedula}"
+    }, {
+      "id": "37511e08-67da-49d4-815a-8e3ffef49008",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ucAdicionar_btnAceptar",
+      "targets": [
+        ["id=Contenido_ucAdicionar_btnAceptar", "id"],
+        ["name=ctl00$Contenido$ucAdicionar$btnAceptar", "name"],
+        ["css=#Contenido_ucAdicionar_btnAceptar", "css:finder"],
+        ["xpath=//input[@id='Contenido_ucAdicionar_btnAceptar']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ucAdicionar_divAdd']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af524505-9d85-45f1-9972-59c6add1b82d",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_DpDLstTipoNovedad",
+      "targets": [],
+      "value": "label=RETIRO DE LA EMPRESA"
+    }, {
+      "id": "d1f1003d-da03-4e3b-9dc7-b095cc5f039a",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDLstTipoNovedad",
+      "targets": [
+        ["id=Contenido_DpDLstTipoNovedad", "id"],
+        ["name=ctl00$Contenido$DpDLstTipoNovedad", "name"],
+        ["css=#Contenido_DpDLstTipoNovedad", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDLstTipoNovedad']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlTipoNovedad']/fieldset/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr/td/div/fieldset/table/tbody/tr/td/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e472b1a-81ac-4f77-9110-05353f20ee74",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_PnlDiaInc > table",
+      "targets": [
+        ["css=#Contenido_PnlDiaInc > table", "css:finder"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table", "xpath:idRelative"],
+        ["xpath=//div/table", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6942f73-e14b-45ff-a842-29fb2d638488",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7118fd84-f003-4a0f-a739-cc3e60f80b4c",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ac78021-a2a1-4209-a9f2-11663430dfbe",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acde8988-7b26-43f9-b416-bd0b1d9e281e",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "3522c3d9-87ba-46dd-99ab-af79a8a15fe5",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=Contenido_BtnGuardar",
+      "targets": [
+        ["id=Contenido_BtnGuardar", "id"],
+        ["name=ctl00$Contenido$BtnGuardar", "name"],
+        ["css=#Contenido_BtnGuardar", "css:finder"],
+        ["xpath=//input[@id='Contenido_BtnGuardar']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3717d0e4-3eb9-481b-bfb1-503c25277e1c",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1be234c4-10b8-447f-9334-76e052d32903",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=Contenido_BtnGuardar",
+      "targets": [
+        ["id=Contenido_BtnGuardar", "id"],
+        ["name=ctl00$Contenido$BtnGuardar", "name"],
+        ["css=#Contenido_BtnGuardar", "css:finder"],
+        ["xpath=//input[@id='Contenido_BtnGuardar']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0cc0a635-8310-4344-a8a4-33ca1c80e725",
+    "name": "AddNovedadIngreso",
+    "commands": [{
+      "id": "96f2af75-e412-4753-84f8-35ac31eece97",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Novedades",
+      "targets": [
+        ["linkText=Novedades", "linkText"],
+        ["css=.highlighted", "css:finder"],
+        ["xpath=//a[contains(text(),'Novedades')]", "xpath:link"],
+        ["xpath=//div[@id='mnuEmpresa']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Novedades.aspx?Inc=mnu')]", "xpath:href"],
+        ["xpath=//div/ul/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Novedades')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "83e57e6e-b3b4-4673-865c-c46ba0185d44",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_btnAdicionar > .ui-button-text",
+      "targets": [
+        ["css=#Contenido_btnAdicionar > .ui-button-text", "css:finder"],
+        ["xpath=//a[@id='Contenido_btnAdicionar']/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar Novedad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbee2e61-815c-4bd3-b6f1-b5573dd60662",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_ucAdicionar_dpdMes",
+      "targets": [],
+      "value": "label=Agosto"
+    }, {
+      "id": "384a0248-756b-4659-a325-6b2054344dde",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ucAdicionar_dpdMes",
+      "targets": [
+        ["id=Contenido_ucAdicionar_dpdMes", "id"],
+        ["name=ctl00$Contenido$ucAdicionar$dpdMes", "name"],
+        ["css=#Contenido_ucAdicionar_dpdMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_ucAdicionar_dpdMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ucAdicionar_divAdd']/div/fieldset/select[2]", "xpath:idRelative"],
+        ["xpath=//fieldset/select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f9865e1-2bec-4554-93a5-927fdcd35893",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ucAdicionar_txtNoID",
+      "targets": [
+        ["id=Contenido_ucAdicionar_txtNoID", "id"],
+        ["name=ctl00$Contenido$ucAdicionar$txtNoID", "name"],
+        ["css=#Contenido_ucAdicionar_txtNoID", "css:finder"],
+        ["xpath=//input[@id='Contenido_ucAdicionar_txtNoID']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ucAdicionar_divAdd']/div[2]/fieldset/input", "xpath:idRelative"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8023c23a-c1f7-42c0-a389-ef91d7ef5ab2",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_ucAdicionar_txtNoID",
+      "targets": [
+        ["id=Contenido_ucAdicionar_txtNoID", "id"],
+        ["name=ctl00$Contenido$ucAdicionar$txtNoID", "name"],
+        ["css=#Contenido_ucAdicionar_txtNoID", "css:finder"],
+        ["xpath=//input[@id='Contenido_ucAdicionar_txtNoID']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ucAdicionar_divAdd']/div[2]/fieldset/input", "xpath:idRelative"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": "${cedula}"
+    }, {
+      "id": "32751da3-0027-4c88-8939-8a500ab69818",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ucAdicionar_btnAceptar",
+      "targets": [
+        ["id=Contenido_ucAdicionar_btnAceptar", "id"],
+        ["name=ctl00$Contenido$ucAdicionar$btnAceptar", "name"],
+        ["css=#Contenido_ucAdicionar_btnAceptar", "css:finder"],
+        ["xpath=//input[@id='Contenido_ucAdicionar_btnAceptar']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ucAdicionar_divAdd']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bd1c4cc-2f0d-483b-baaa-e8f043f16ace",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_DpDLstTipoNovedad",
+      "targets": [],
+      "value": "label=INGRESO"
+    }, {
+      "id": "7e35d3a3-6d3f-4d2e-ba77-c9551f15748f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDLstTipoNovedad",
+      "targets": [
+        ["id=Contenido_DpDLstTipoNovedad", "id"],
+        ["name=ctl00$Contenido$DpDLstTipoNovedad", "name"],
+        ["css=#Contenido_DpDLstTipoNovedad", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDLstTipoNovedad']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlTipoNovedad']/fieldset/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr/td/div/fieldset/table/tbody/tr/td/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8cecc0f-3bb1-4744-8b12-bf3b0dffb2f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_PnlDiaInc > table",
+      "targets": [
+        ["css=#Contenido_PnlDiaInc > table", "css:finder"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table", "xpath:idRelative"],
+        ["xpath=//div/table", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11eb1e60-e484-48d2-a64e-859b62f5fb79",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "059135e5-2d90-4e73-ab33-0356de2ace55",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94e9bbce-97f4-46ee-903f-7763638d3362",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa2cf7ab-7af3-420d-ba86-d89440d7a9b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$TxtDiaInc", "name"],
+        ["css=#Contenido_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "726e0423-53fe-4439-a5d1-24623faf6355",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=Contenido_BtnGuardar",
+      "targets": [
+        ["id=Contenido_BtnGuardar", "id"],
+        ["name=ctl00$Contenido$BtnGuardar", "name"],
+        ["css=#Contenido_BtnGuardar", "css:finder"],
+        ["xpath=//input[@id='Contenido_BtnGuardar']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a3e705f-77a5-4b69-abcb-5dd452504e78",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67cdb875-f589-48da-8fc7-28f96501f0d9",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=Contenido_BtnGuardar",
+      "targets": [
+        ["id=Contenido_BtnGuardar", "id"],
+        ["name=ctl00$Contenido$BtnGuardar", "name"],
+        ["css=#Contenido_BtnGuardar", "css:finder"],
+        ["xpath=//input[@id='Contenido_BtnGuardar']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//article/table/tbody/tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "edad704a-51a1-4211-84d2-2aa4bcce079e",
+    "name": "GenerarPlanillaOctubre",
+    "commands": [{
+      "id": "72442331-220c-4dd2-8743-d3b7e34f301b",
+      "comment": "",
+      "command": "open",
+      "target": "/AdicionarLiquidacion.aspx?planilla=I",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ffb6d48-928b-4742-aed2-7b17f26d0916",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1056x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae115b67-83bd-4e41-a42f-49172cbb90c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDMes",
+      "targets": [
+        ["id=Contenido_DpDMes", "id"],
+        ["name=ctl00$Contenido$DpDMes", "name"],
+        ["css=#Contenido_DpDMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_UpdatePanelPension']/table/tbody/tr[2]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffe9a1fd-3a1f-43b0-abd3-af58e9526a65",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_DpDMes",
+      "targets": [],
+      "value": "label=Octubre"
+    }, {
+      "id": "5cad6043-1fb9-4d32-a31c-7e9b52699083",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDMes",
+      "targets": [
+        ["id=Contenido_DpDMes", "id"],
+        ["name=ctl00$Contenido$DpDMes", "name"],
+        ["css=#Contenido_DpDMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_UpdatePanelPension']/table/tbody/tr[2]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70e53758-42a8-4a4b-8b41-ec7b161c73d9",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbde97a5-7a68-49f8-bc65-638070862573",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnAdicionar",
+      "targets": [
+        ["id=Contenido_btnAdicionar", "id"],
+        ["name=ctl00$Contenido$btnAdicionar", "name"],
+        ["css=#Contenido_btnAdicionar", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnAdicionar']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_UpdatePanel2']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "10b58df6-8242-43ff-ad72-7fcb7c0605de",
+    "name": "GenerarPlanillaSeptiembre",
+    "commands": [{
+      "id": "75f06bc1-7da0-49ab-8fe2-1ad5c29b2ce8",
+      "comment": "",
+      "command": "open",
+      "target": "/AdicionarLiquidacion.aspx?planilla=I",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26d913f2-4627-481c-9d57-d9281e9c74af",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1056x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28d04967-0b0f-4706-a024-a7fd10d42910",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDMes",
+      "targets": [
+        ["id=Contenido_DpDMes", "id"],
+        ["name=ctl00$Contenido$DpDMes", "name"],
+        ["css=#Contenido_DpDMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_UpdatePanelPension']/table/tbody/tr[2]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "635b0728-d172-4e3d-b4f4-567d83afec4d",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_DpDMes",
+      "targets": [],
+      "value": "label=Septiembre"
+    }, {
+      "id": "b128d096-4e98-47e7-9414-63862af8fb19",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_DpDMes",
+      "targets": [
+        ["id=Contenido_DpDMes", "id"],
+        ["name=ctl00$Contenido$DpDMes", "name"],
+        ["css=#Contenido_DpDMes", "css:finder"],
+        ["xpath=//select[@id='Contenido_DpDMes']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_UpdatePanelPension']/table/tbody/tr[2]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7399ba93-68cc-4dda-9eb3-61f7ace255e6",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5a6c70b-c972-4740-a656-b293bfe3b31f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnAdicionar",
+      "targets": [
+        ["id=Contenido_btnAdicionar", "id"],
+        ["name=ctl00$Contenido$btnAdicionar", "name"],
+        ["css=#Contenido_btnAdicionar", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnAdicionar']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_UpdatePanel2']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d3372c7d-95f3-46fd-bbdb-987407ac49a1",
+    "name": "GenerarPDFplanilla_1",
+    "commands": [{
+      "id": "8652da1d-7e79-40c0-a8e0-49758505974a",
+      "comment": "",
+      "command": "//open",
+      "target": "https://www.aportesenlinea.com/Autoliquidaciones.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf9b705c-7b4d-4aba-9263-6afb806da042",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52efb014-ab1c-4d48-bbc2-f20bd845e86a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Liquidaciones",
+      "targets": [
+        ["linkText=Liquidaciones", "linkText"],
+        ["css=.selected", "css:finder"],
+        ["xpath=//a[contains(text(),'Liquidaciones')]", "xpath:link"],
+        ["xpath=//div[@id='mnuEmpresa']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Autoliquidaciones.aspx?maremplsid=l2dlizpbuputjrgk545r2ty2')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Liquidaciones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0849d88d-4081-4c4f-b82f-1eb396dd4cf8",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_gvAutoliquidaciones_LbValorPagado_1",
+      "targets": [
+        ["id=Contenido_gvAutoliquidaciones_LbValorPagado_0", "id"],
+        ["linkText=Pagar Planilla", "linkText"],
+        ["css=#Contenido_gvAutoliquidaciones_LbValorPagado_0", "css:finder"],
+        ["xpath=//a[contains(text(),'Pagar Planilla')]", "xpath:link"],
+        ["xpath=//a[@id='Contenido_gvAutoliquidaciones_LbValorPagado_0']", "xpath:attributes"],
+        ["xpath=//table[@id='Contenido_gvAutoliquidaciones']/tbody/tr[3]/td[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$Contenido$gvAutoliquidaciones$ctl03$LbValorPagado','')\")]", "xpath:href"],
+        ["xpath=//td[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pagar Planilla')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e851f5b-03f0-4710-bbe3-da433fb1c482",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "99d61afe-88fa-4224-86fe-cdd799c74f17",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4faf672-3550-493d-bba0-9d20e2dca3a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "newWindow3",
+      "windowTimeout": 32000
+    }, {
+      "id": "3d2d5883-74b0-4144-976e-96a2e862a4aa",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${newWindow}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d875734-8168-42d4-92e4-a072d996a3bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_imgBtnPagoAsistido",
+      "targets": [
+        ["id=Contenido_imgBtnPagoAsistido", "id"],
+        ["name=ctl00$Contenido$imgBtnPagoAsistido", "name"],
+        ["css=#Contenido_imgBtnPagoAsistido", "css:finder"],
+        ["xpath=//input[@id='Contenido_imgBtnPagoAsistido']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/div/section[6]/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88f111c2-619e-4b6c-80fd-70d8a4632e91",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
+        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
+        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f15b0c84-a9c7-4c1e-b41b-c798e6cea413",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [],
+      "value": "label=PDF"
+    }, {
+      "id": "356dceb1-4598-498f-aef7-01f053e114e0",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
+        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
+        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d26717d6-eb1b-4efe-9804-e5fd9a59d6c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl01",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl01", "id"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl01", "css:finder"],
+        ["xpath=//a[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl01']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Export')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
       "windowHandleName": "win8083",
       "windowTimeout": 2000
+    }, {
+      "id": "735c7fc2-931b-4ea9-85de-83351205f349",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e830b0a9-a91c-45e1-af1e-30db45b7b5d2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Liquidaciones",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "c50bf4ed-a781-435c-b127-c2d4d79ebaf7",
+    "name": "GenerarPDFplanilla_2",
+    "commands": [{
+      "id": "fc01c27c-0ca3-4842-be68-fa5d6cd82578",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.aportesenlinea.com/Autoliquidaciones.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75ad5e91-61c6-44db-b4de-bba93f7fe1d7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Liquidaciones",
+      "targets": [
+        ["linkText=Liquidaciones", "linkText"],
+        ["css=.selected", "css:finder"],
+        ["xpath=//a[contains(text(),'Liquidaciones')]", "xpath:link"],
+        ["xpath=//div[@id='mnuEmpresa']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Autoliquidaciones.aspx?maremplsid=l2dlizpbuputjrgk545r2ty2')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Liquidaciones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e222c923-84cc-4af5-8aac-4e9d6d4da1fb",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_gvAutoliquidaciones_LbValorPagado_1",
+      "targets": [
+        ["id=Contenido_gvAutoliquidaciones_LbValorPagado_0", "id"],
+        ["linkText=Pagar Planilla", "linkText"],
+        ["css=#Contenido_gvAutoliquidaciones_LbValorPagado_0", "css:finder"],
+        ["xpath=//a[contains(text(),'Pagar Planilla')]", "xpath:link"],
+        ["xpath=//a[@id='Contenido_gvAutoliquidaciones_LbValorPagado_0']", "xpath:attributes"],
+        ["xpath=//table[@id='Contenido_gvAutoliquidaciones']/tbody/tr[3]/td[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$Contenido$gvAutoliquidaciones$ctl03$LbValorPagado','')\")]", "xpath:href"],
+        ["xpath=//td[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pagar Planilla')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9dcc952a-2480-4c1a-a906-8fe465919f38",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "3e91be88-9f45-41cc-a4c0-20eb8b75ae28",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c72d7f9-9211-47d5-b18d-b6009242d0f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "newWindow3",
+      "windowTimeout": 20000
+    }, {
+      "id": "d839244b-789f-4167-a08b-6663b3e9863b",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${newWindow3}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d66c42f7-4a0b-495c-9bfb-3dd814afe267",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_imgBtnPagoAsistido",
+      "targets": [
+        ["id=Contenido_imgBtnPagoAsistido", "id"],
+        ["name=ctl00$Contenido$imgBtnPagoAsistido", "name"],
+        ["css=#Contenido_imgBtnPagoAsistido", "css:finder"],
+        ["xpath=//input[@id='Contenido_imgBtnPagoAsistido']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/div/section[6]/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d197e2b9-f24f-4d6a-87dc-5877051d99f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
+        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
+        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b489554-ac34-490e-bc97-27151b802940",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [],
+      "value": "label=PDF"
+    }, {
+      "id": "73b50c0d-9f4e-43be-9cc2-c43873544b8c",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
+        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
+        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4412dbda-0f54-438d-be82-4b527d8de773",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl01",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl01", "id"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl01", "css:finder"],
+        ["xpath=//a[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl01']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Export')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8083",
+      "windowTimeout": 2000
+    }, {
+      "id": "a67714b0-7121-487c-9b70-07744e9030f6",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root3}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "509a465a-899d-46c4-8cf3-cbab6e6c940b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Liquidaciones",
+      "targets": [],
+      "value": "30000"
     }]
   }],
   "suites": [{

@@ -4,6 +4,10 @@ Almacenamiento de test automatizados generados con deferentes extensiones de chr
 
 ### Generar Planilla
 
+## Estado
+Se realiza la planilla automaticamente, con el error de que no se puede generar una tras otra, es necesario trabajar en el 'window store and handle' para permitir el manejo de ventanas cuando se genera la planilla
+
+
 **Pasos**
 
 	1. Adicionar Novedad Retiro (Mes,Dia)
