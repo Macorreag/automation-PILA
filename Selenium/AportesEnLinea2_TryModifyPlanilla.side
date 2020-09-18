@@ -829,129 +829,10 @@
       ],
       "value": ""
     }, {
-      "id": "03ef9dd8-d148-4ce2-a6f9-13370807c04c",
+      "id": "2a3b8a5d-8a0e-40f5-91a2-e39357905769",
       "comment": "",
-      "command": "waitForElementPresent",
-      "target": "id=Contenido_btnPagoElectronico",
-      "targets": [
-        ["id=Contenido_btnPagoElectronico", "id"],
-        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
-        ["css=#Contenido_btnPagoElectronico", "css:finder"],
-        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
-        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
-        ["xpath=//td[2]/input", "xpath:position"]
-      ],
-      "value": "30000"
-    }, {
-      "id": "126eef63-8e54-4fda-b058-fc0a6160778c",
-      "comment": "",
-      "command": "storeWindowHandle",
-      "target": "root",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "814d1d13-e7d6-4bc2-be9f-bd0acecfe8a0",
-      "comment": "",
-      "command": "click",
-      "target": "id=Contenido_btnPagoElectronico",
-      "targets": [
-        ["id=Contenido_btnPagoElectronico", "id"],
-        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
-        ["css=#Contenido_btnPagoElectronico", "css:finder"],
-        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
-        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
-        ["xpath=//td[2]/input", "xpath:position"]
-      ],
-      "value": "",
-      "opensWindow": true,
-      "windowHandleName": "newWindow",
-      "windowTimeout": 40000
-    }, {
-      "id": "453b805b-5bed-4041-9aa2-97dc81e74c66",
-      "comment": "",
-      "command": "selectWindow",
-      "target": "handle=${newWindow}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dd59c474-a7ae-45b9-afa9-69b6c2fa2cf8",
-      "comment": "",
-      "command": "click",
-      "target": "id=Contenido_imgBtnPagoAsistido",
-      "targets": [
-        ["id=Contenido_imgBtnPagoAsistido", "id"],
-        ["name=ctl00$Contenido$imgBtnPagoAsistido", "name"],
-        ["css=#Contenido_imgBtnPagoAsistido", "css:finder"],
-        ["xpath=//input[@id='Contenido_imgBtnPagoAsistido']", "xpath:attributes"],
-        ["xpath=//form[@id='formBody']/div[3]/div/article/div/section[6]/div[3]/input[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/input[2]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f5e41968-3a92-489e-9696-bed6db370839",
-      "comment": "",
-      "command": "click",
-      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
-      "targets": [
-        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
-        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
-        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
-        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
-        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
-        ["xpath=//select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "880050fa-56e9-47bc-a057-44632c931760",
-      "comment": "",
-      "command": "select",
-      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
-      "targets": [],
-      "value": "label=PDF"
-    }, {
-      "id": "209cd196-057b-4b63-9ad1-87eae9fc0a5c",
-      "comment": "",
-      "command": "click",
-      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
-      "targets": [
-        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
-        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
-        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
-        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
-        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
-        ["xpath=//select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "d38c5249-c11c-4830-9f3b-cf730652f35a",
-      "comment": "",
-      "command": "click",
-      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl01",
-      "targets": [
-        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl01", "id"],
-        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl01", "css:finder"],
-        ["xpath=//a[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl01']", "xpath:attributes"],
-        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td[3]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
-        ["xpath=//td[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Export')]", "xpath:innerText"]
-      ],
-      "value": "",
-      "opensWindow": true,
-      "windowHandleName": "savefile",
-      "windowTimeout": 2000
-    }, {
-      "id": "a21e1341-499e-4b37-9446-2f3498361946",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ea0db411-89c7-4703-a3ac-0ea5596a20d8",
-      "comment": "",
-      "command": "selectWindow",
-      "target": "handle=${root}",
+      "command": "run",
+      "target": "GenerarPDFdesdeLiq",
       "targets": [],
       "value": ""
     }, {
@@ -2300,6 +2181,264 @@
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "669f4f0f-e4cb-4f81-979d-726289136e86",
+    "name": "CambioUltimaPlanilla",
+    "commands": [{
+      "id": "4e4e2137-b17b-4f2f-80a1-deabc1712c48",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"0\"];",
+      "targets": [],
+      "value": "positions"
+    }, {
+      "id": "80463d49-4a1e-426b-bf34-d133a0260cbe",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"13853808\"];",
+      "targets": [],
+      "value": "cedulas"
+    }, {
+      "id": "294b78ce-dc7f-4f9b-979a-8d76053c71c7",
+      "comment": "",
+      "command": "forEach",
+      "target": "cedulas",
+      "targets": [],
+      "value": "cedula"
+    }, {
+      "id": "29b176c7-5041-42d6-9b5a-084075c08040",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "130d9d99-b3a1-4098-894f-d9fedef93231",
+      "comment": "",
+      "command": "run",
+      "target": "login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8018ab31-0f1b-4db7-afc1-c098b462d7ee",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_chkPlanillasPagadas",
+      "targets": [
+        ["id=Contenido_chkPlanillasPagadas", "id"],
+        ["name=ctl00$Contenido$chkPlanillasPagadas", "name"],
+        ["css=#Contenido_chkPlanillasPagadas", "css:finder"],
+        ["xpath=//input[@id='Contenido_chkPlanillasPagadas']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_pnlBuscar']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4a409d6-2b8f-4a01-b210-99da576ab0ca",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c01f895-eeeb-41db-9f31-547594b9b203",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Opciones",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e16fb30e-40de-401a-b6f4-ea9ea480703a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Opciones",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b3fe36f2-2048-4649-8a76-33ec042ed475",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ui-menu-0-2 > .icono",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d74ae155-619c-4106-9c4a-05bf79c532e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_lnkCorrecciones > span:nth-child(5)",
+      "targets": [
+        ["css=#Contenido_lnkCorrecciones > span:nth-child(5)", "css:finder"],
+        ["xpath=//a[@id='Contenido_lnkCorrecciones']/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Esta planilla es utilizada para corregir inexactitudes de aportes al Sistema de Seguridad Social. No se puede utilizar para correcciones que impliquen devolución de valores pagados en exceso.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fc6a8dd-7941-443a-a2bc-213fbad58ad0",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAdicionarEmpleado",
+      "targets": [
+        ["id=btnAdicionarEmpleado", "id"],
+        ["css=#btnAdicionarEmpleado", "css:finder"],
+        ["xpath=//button[@id='btnAdicionarEmpleado']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/div/section/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar empleado')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67f91b81-3029-43ca-a496-32624b4e25d8",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1751bed9-02c1-402b-8166-39b47b40a9a4",
+      "comment": "",
+      "command": "run",
+      "target": "GenerarPDFdesdeLiq",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e251b278-a838-4f5c-bd3f-fda118677102",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5e696fdf-10bc-4a6a-8d5f-83425f3e770f",
+    "name": "GenerarPDFdesdeLiq",
+    "commands": [{
+      "id": "3f44be2e-bfdc-4ef2-9de5-ad449085813d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "35cbd011-6e42-4ecf-b0be-aec28ff2d9ce",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52cb217c-bc40-4377-a4e7-45e9acd70277",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_btnPagoElectronico",
+      "targets": [
+        ["id=Contenido_btnPagoElectronico", "id"],
+        ["name=ctl00$Contenido$btnPagoElectronico", "name"],
+        ["css=#Contenido_btnPagoElectronico", "css:finder"],
+        ["xpath=//input[@id='Contenido_btnPagoElectronico']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_Panel1']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "newWindow",
+      "windowTimeout": 40000
+    }, {
+      "id": "63d19da9-470e-4242-a51b-1799f77da8c6",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${newWindow}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9325a9a-244c-43f0-8e55-be656dd78287",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_imgBtnPagoAsistido",
+      "targets": [
+        ["id=Contenido_imgBtnPagoAsistido", "id"],
+        ["name=ctl00$Contenido$imgBtnPagoAsistido", "name"],
+        ["css=#Contenido_imgBtnPagoAsistido", "css:finder"],
+        ["xpath=//input[@id='Contenido_imgBtnPagoAsistido']", "xpath:attributes"],
+        ["xpath=//form[@id='formBody']/div[3]/div/article/div/section[6]/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91b96b35-4c61-4237-b389-a61be22fb967",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
+        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
+        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0201208f-0aa9-4bcc-8fd8-f791d5371493",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [],
+      "value": "label=PDF"
+    }, {
+      "id": "6fbc2565-40e2-4d69-90a8-699a747b69bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl00",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl00", "id"],
+        ["name=ctl00$Contenido$ReportViewer1$ctl01$ctl05$ctl00", "name"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl00", "css:finder"],
+        ["xpath=//select[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl00']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62e58e38-808c-4cf6-a450-9ff3bc1f338b",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_ReportViewer1_ctl01_ctl05_ctl01",
+      "targets": [
+        ["id=Contenido_ReportViewer1_ctl01_ctl05_ctl01", "id"],
+        ["css=#Contenido_ReportViewer1_ctl01_ctl05_ctl01", "css:finder"],
+        ["xpath=//a[@id='Contenido_ReportViewer1_ctl01_ctl05_ctl01']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_ReportViewer1']/div/div/div[2]/table/tbody/tr/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Export')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "savefile",
+      "windowTimeout": 2000
+    }, {
+      "id": "6130d195-fc2b-464d-ab80-1b6244454433",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "425265fd-231e-4dd3-b0a6-a0522fb6c6a1",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
       "targets": [],
       "value": ""
     }]
