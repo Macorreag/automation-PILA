@@ -2003,7 +2003,7 @@
       "id": "80463d49-4a1e-426b-bf34-d133a0260cbe",
       "comment": "",
       "command": "executeScript",
-      "target": "return [\"1097727343\"];",
+      "target": "return [\"18411718\"];",
       "targets": [],
       "value": "cedulas"
     }, {
@@ -2053,15 +2053,54 @@
       "comment": "",
       "command": "waitForElementPresent",
       "target": "linkText=Opciones",
-      "targets": [],
+      "targets": [
+        ["linkText=Opciones", "linkText"],
+        ["css=.gridItemStyle:nth-child(3) > td:nth-child(1) > .opciones", "css:finder"],
+        ["xpath=//a[contains(text(),'Opciones')]", "xpath:link"],
+        ["xpath=//table[@id='Contenido_gvAutoliquidaciones']/tbody/tr[3]/td/a", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Opciones ')]", "xpath:innerText"]
+      ],
       "value": "30000"
     }, {
       "id": "e16fb30e-40de-401a-b6f4-ea9ea480703a",
       "comment": "",
       "command": "mouseOver",
+      "target": "css=.gridItemStyle:nth-child(3) > td:nth-child(1) > .opciones > .icono",
+      "targets": [
+        ["css=.gridItemStyle:nth-child(3) > td:nth-child(1) > .opciones > .icono", "css:finder"],
+        ["xpath=//table[@id='Contenido_gvAutoliquidaciones']/tbody/tr[3]/td/a/span", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/a/span", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "0f31b482-a846-4cfd-bc58-30766c06b9a3",
+      "comment": "",
+      "command": "mouseOver",
       "target": "linkText=Opciones",
       "targets": [],
       "value": "30000"
+    }, {
+      "id": "1a8dc901-da8f-426e-8591-8a97f7890407",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "linkText=Opciones",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c157bc81-f839-4a3d-bb2b-fde307582a05",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Opciones",
+      "targets": [
+        ["linkText=Opciones", "linkText"],
+        ["css=.gridItemStyle:nth-child(3) > td:nth-child(1) > .opciones", "css:finder"],
+        ["xpath=//a[contains(text(),'Opciones')]", "xpath:link"],
+        ["xpath=//table[@id='Contenido_gvAutoliquidaciones']/tbody/tr[3]/td/a", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Opciones ')]", "xpath:innerText"]
+      ],
+      "value": ""
     }, {
       "id": "b3fe36f2-2048-4649-8a76-33ec042ed475",
       "comment": "",
@@ -2096,6 +2135,13 @@
       ],
       "value": ""
     }, {
+      "id": "8f7ffda5-c07f-45e9-972c-2c2d66fee233",
+      "comment": "",
+      "command": "run",
+      "target": "ModificarDiaFinPlanilla",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "67f91b81-3029-43ca-a496-32624b4e25d8",
       "comment": "",
       "command": "pause",
@@ -2125,6 +2171,13 @@
       "id": "e251b278-a838-4f5c-bd3f-fda118677102",
       "comment": "",
       "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "870f4c7a-665e-48bd-89eb-19c6482b11a3",
+      "comment": "",
+      "command": "exe",
       "target": "",
       "targets": [],
       "value": ""
@@ -2236,6 +2289,189 @@
       "command": "selectWindow",
       "target": "handle=${root}",
       "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b5819461-af0d-41ed-a48f-2c08159b2950",
+    "name": "ModificarDiaFinPlanilla",
+    "commands": [{
+      "id": "87685cbe-adb7-459c-b0eb-e20b603af7eb",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_gvUsuarios_imgCorregir_0",
+      "targets": [
+        ["id=Contenido_gvUsuarios_imgCorregir_0", "id"],
+        ["name=ctl00$Contenido$gvUsuarios$ctl03$imgCorregir", "name"],
+        ["css=#Contenido_gvUsuarios_imgCorregir_0", "css:finder"],
+        ["xpath=//input[@id='Contenido_gvUsuarios_imgCorregir_0']", "xpath:attributes"],
+        ["xpath=//table[@id='Contenido_gvUsuarios']/tbody/tr[3]/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12818599-f1cc-4aef-9aff-a02af439fc26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.section-content:nth-child(4) > .field--multiple:nth-child(2)",
+      "targets": [
+        ["css=.section-content:nth-child(4) > .field--multiple:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='Contenido_UpdatePanelPlanillaN']/div/section[4]/div", "xpath:idRelative"],
+        ["xpath=//section[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8536f611-9001-46b9-b9a6-e0af16a79b54",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c74bc343-2109-47c6-babc-f2b5a3a532e4",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_gvNovedades_ImgEliminar_0",
+      "targets": [
+        ["id=Contenido_gvNovedades_ImgEliminar_0", "id"],
+        ["name=ctl00$Contenido$gvNovedades$ctl02$ImgEliminar", "name"],
+        ["css=#Contenido_gvNovedades_ImgEliminar_0", "css:finder"],
+        ["xpath=//input[@id='Contenido_gvNovedades_ImgEliminar_0']", "xpath:attributes"],
+        ["xpath=//table[@id='Contenido_gvNovedades']/tbody/tr[2]/td[12]/input", "xpath:idRelative"],
+        ["xpath=//td[12]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9423ca98-be3a-454e-8ade-7d32f63e69c5",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Desea eliminar la novedad?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc5c4a47-f7cb-46d7-a816-e76a2a6d6b4c",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "761188f6-41a6-4a6a-bc3f-c6ade11145cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_btnAdicionarNovedad > span",
+      "targets": [
+        ["css=#Contenido_btnAdicionarNovedad > span", "css:finder"],
+        ["xpath=//a[@id='Contenido_btnAdicionarNovedad']/span", "xpath:idRelative"],
+        ["xpath=//div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar novedad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c580b3b-9b42-45be-a649-7b3d80610ccb",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_novedades_DpDLstTipoNovedad",
+      "targets": [
+        ["id=Contenido_novedades_DpDLstTipoNovedad", "id"],
+        ["name=ctl00$Contenido$novedades$DpDLstTipoNovedad", "name"],
+        ["css=#Contenido_novedades_DpDLstTipoNovedad", "css:finder"],
+        ["xpath=//select[@id='Contenido_novedades_DpDLstTipoNovedad']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_novedades_PnlTipoNovedad']/fieldset/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//td/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62ad5f69-0416-43db-9a7f-a1c5596d476f",
+      "comment": "",
+      "command": "select",
+      "target": "id=Contenido_novedades_DpDLstTipoNovedad",
+      "targets": [],
+      "value": "label=RETIRO DE LA EMPRESA"
+    }, {
+      "id": "c188b78e-915c-43e6-805c-485935e35b51",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_novedades_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_novedades_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$novedades$TxtDiaInc", "name"],
+        ["css=#Contenido_novedades_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_novedades_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_novedades_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21443028-3314-4fa6-ba1b-dfc48fdc3864",
+      "comment": "",
+      "command": "type",
+      "target": "id=Contenido_novedades_TxtDiaInc",
+      "targets": [
+        ["id=Contenido_novedades_TxtDiaInc", "id"],
+        ["name=ctl00$Contenido$novedades$TxtDiaInc", "name"],
+        ["css=#Contenido_novedades_TxtDiaInc", "css:finder"],
+        ["xpath=//input[@id='Contenido_novedades_TxtDiaInc']", "xpath:attributes"],
+        ["xpath=//div[@id='Contenido_novedades_PnlDiaInc']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "24"
+    }, {
+      "id": "e02bfc81-c26d-46ee-84a6-d7f3d13f5dea",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Contenido_novedades_PnlPeriodo > fieldset",
+      "targets": [
+        ["css=#Contenido_novedades_PnlPeriodo > fieldset", "css:finder"],
+        ["xpath=//div[@id='Contenido_novedades_PnlPeriodo']/fieldset", "xpath:idRelative"],
+        ["xpath=//td/table/tbody/tr/td/div/fieldset", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b80931e-4a74-4289-a04f-877bcd943ba0",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c094bea-ff9b-4819-8e4b-a4288a5b6a65",
+      "comment": "",
+      "command": "click",
+      "target": "id=Contenido_novedades_BtnGuardar",
+      "targets": [
+        ["id=Contenido_novedades_BtnGuardar", "id"],
+        ["name=ctl00$Contenido$novedades$BtnGuardar", "name"],
+        ["css=#Contenido_novedades_BtnGuardar", "css:finder"],
+        ["xpath=//input[@id='Contenido_novedades_BtnGuardar']", "xpath:attributes"],
+        ["xpath=//section[@id='Contenido_NovedadesSection']/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//section[2]/table/tbody/tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "587983aa-52e5-4f11-b6b5-3c39cb1f33b5",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Esta novedad automáticamente actualizará la fecha de retiro del empleado. Para registrar la novedad y actualizar los datos del empleado haga clic en el botón “Aceptar” (OK). En caso contrario haga clic en el botón “Cancelar” (Cancel).",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd397864-3aa7-4696-8690-728e2a80cb18",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9950e22c-145f-4773-a5bc-182699973c21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-state-hover > .ui-button-text",
+      "targets": [
+        ["css=.ui-state-hover > .ui-button-text", "css:finder"],
+        ["xpath=//form[@id='formBody']/div[9]/div[3]/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Finalizar')]", "xpath:innerText"]
+      ],
       "value": ""
     }]
   }],
